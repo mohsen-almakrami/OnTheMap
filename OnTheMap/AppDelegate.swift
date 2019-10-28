@@ -8,14 +8,25 @@
 
 import UIKit
 import CoreData
+import KeychainAccess
+
+
+typealias App = AppDelegate
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
+    static var keychain: Keychain?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        
+        
+        
         return true
     }
 
@@ -80,3 +91,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension UIWindow {
+ 
+ 
+    // Switch Root VC Extension
+    // This function can use to change between normal mode and dark mode.
+    // Because the navigation bar and the tab bar appearance can be changed.
+    func switchRootViewController(_ viewController: UIViewController,
+                                  animated: Bool = true,
+                                  duration: TimeInterval = 0,
+                                  options: UIView.AnimationOptions = .curveEaseInOut,
+                                  completion: (() -> Void)? = nil) {
+        
+        guard animated else {
+            rootViewController = viewController
+            return
+        }
+        
+        
+        
+        UIView.transition(with: self, duration: duration, options: options, animations: {
+            let oldState = UIView.areAnimationsEnabled
+            UIView.setAnimationsEnabled(false)
+            self.rootViewController = viewController
+            UIView.setAnimationsEnabled(oldState)
+        }) { (_) in
+            completion?()
+        }
+    }
+}
