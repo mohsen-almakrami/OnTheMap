@@ -1,5 +1,5 @@
 //
-//  MainNavigationController.swift
+//  TabBarController.swift
 //  OnTheMap
 //
 //  Created by Mohsen Almakrami on 29/02/1441 AH.
@@ -8,8 +8,19 @@
 
 import UIKit
 
-class MainNavigationController: UINavigationController {
+class TabBarController: UITabBarController {
 
+
+    @IBAction func logoutBarButtonItemPressed(_ sender: UIBarButtonItem) {
+        
+        try! App.keychain?.remove("token")
+        UIApplication.setRootView(LoginViewController.instantiate(from: .Main), options: UIApplication.logoutAnimation)
+        
+    }
+    
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -20,8 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         
-        
-        
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
          
          App.keychain = Keychain(server: Bundle.main.bundleIdentifier!, protocolType: .https)
@@ -29,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     // Let's check if user availability
                     if App.keychain!["token"] != nil {
                         // Show home page
-                     let mainViewController = mainStoryBoard.instantiateViewController(identifier: "MainNavigationController")
+                     let mainViewController = mainStoryBoard.instantiateViewController(identifier: "TabBarController")
                         setRootViewController(mainViewController)
                      
                     } else {

@@ -45,3 +45,29 @@ extension UIApplication {
         }
     }
 }
+
+extension UIViewController {
+    class func activateSpinner(onView : UIView) -> UIView {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(white: 0.10, alpha: 0.75)
+        
+        let ai = UIActivityIndicatorView.init(style: .large)
+        
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        return spinnerView
+    }
+    
+    class func deactivateSpinner(spinner :UIView) {
+        DispatchQueue.main.async {
+            spinner.removeFromSuperview()
+        }
+    }
+}
+
