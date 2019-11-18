@@ -52,10 +52,9 @@ class AddLocationViewController: UIViewController {
                 
                 if success == true {
                     DispatchQueue.main.async {
-                        print("DDDDEEEEEEEEEEE")
-//                        let controller = self.storyboard!.instantiateViewController(withIdentifier: "PostConfirmationViewController")
-//                        self.present(controller, animated: true, completion: nil)
-//                        UIViewController.deactivateSpinner(spinner: activityView)
+                        let controller = self.storyboard!.instantiateViewController(withIdentifier: "ConfirmationViewController")
+                        self.present(controller, animated: true, completion: nil)
+                        UIViewController.deactivateSpinner(spinner: activityView)
                     }
                 } else {
                     DispatchQueue.main.async {

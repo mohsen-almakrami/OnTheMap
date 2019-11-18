@@ -14,6 +14,7 @@
 		820E00BB236748050041BCE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820E00B9236748050041BCE7 /* Main.storyboard */; };
 		821E43AD237F2627008A8259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821E43AC237F2626008A8259 /* Assets.xcassets */; };
 		822BA127238318000086A34A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822BA126238318000086A34A /* Location.swift */; };
+		822BA12923831E2F0086A34A /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822BA12823831E2F0086A34A /* ConfirmationViewController.swift */; };
 		823E4C5D238036A600E0A835 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E4C5C238036A600E0A835 /* TableViewController.swift */; };
 		823E4C5F2380397200E0A835 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E4C5E2380397200E0A835 /* Helper.swift */; };
 		823E4C612380454900E0A835 /* StudentLocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E4C602380454900E0A835 /* StudentLocationAPI.swift */; };
@@ -36,6 +37,7 @@
 		821E43AB237F2306008A8259 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821E43AC237F2626008A8259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		822BA126238318000086A34A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		822BA12823831E2F0086A34A /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		823E4C5C238036A600E0A835 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		823E4C5E2380397200E0A835 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		823E4C602380454900E0A835 /* StudentLocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationAPI.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				824851AE236781D70058A199 /* TabBarController.swift */,
 				82D328CC237F275B002E95C2 /* AddLocationViewController.swift */,
 				823E4C5C238036A600E0A835 /* TableViewController.swift */,
+				822BA12823831E2F0086A34A /* ConfirmationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				822BA127238318000086A34A /* Location.swift in Sources */,
 				823E4C5D238036A600E0A835 /* TableViewController.swift in Sources */,
 				823E4C612380454900E0A835 /* StudentLocationAPI.swift in Sources */,
+				822BA12923831E2F0086A34A /* ConfirmationViewController.swift in Sources */,
 				820E00B6236748050041BCE7 /* SceneDelegate.swift in Sources */,
 				82D328CD237F275B002E95C2 /* AddLocationViewController.swift in Sources */,
 				82B89BF72367573D008B8889 /* InitViewController.swift in Sources */,

@@ -183,7 +183,7 @@ class StudentLocationAPI {
     
     
     // MARK: POST STUDENT INFO
-    func postLocation(_ student: StudentLocation, _  completionHandlerfForPostLocation: @escaping (_ success: Bool, _ error: String?, _ objectID:String?) -> Void) {
+    class func postLocation(_  completionHandlerfForPostLocation: @escaping (_ success: Bool, _ error: String?, _ objectID:String?) -> Void) {
         
         
         
@@ -192,7 +192,7 @@ class StudentLocationAPI {
         request.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
         request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = "{\"uniqueKey\": \"\(student.uniqueKey)\", \"firstName\": \"\(student.firstName)\", \"lastName\": \"\(student.lastName)\",\"mapString\": \"\(student.mapString)\", \"mediaURL\": \"\(student.mediaURL)\",\"latitude\": \(student.latitude), \"longitude\": \(student.longitude)}".data(using: .utf8)
+        request.httpBody = "{\"uniqueKey\": \"\(StudentLocationAPI.Constants.studentKey)\", \"firstName\": \"\(StudentLocationAPI.Constants.firstName)\", \"lastName\": \"\(StudentLocationAPI.Constants.lastName)\",\"mapString\": \"\(StudentLocationAPI.Constants.mapString)\", \"mediaURL\": \"\(StudentLocationAPI.Constants.mediaURL)\",\"latitude\": \(StudentLocationAPI.Constants.latitude), \"longitude\": \(StudentLocationAPI.Constants.longitude)}".data(using: .utf8)
         
         
         let session = URLSession.shared
@@ -234,7 +234,7 @@ class StudentLocationAPI {
     }
     
     // UPDATE STUDENT INFO
-    func updateStudentInfo(objectID: String, student : StudentLocation,  _ completionHandlerfForUpdateStudentInfo: @escaping (_ success: Bool, _ error: String?) -> Void) {
+    class func updateStudentInfo(objectID: String,  _ completionHandlerfForUpdateStudentInfo: @escaping (_ success: Bool, _ error: String?) -> Void) {
         
         let urlString = "https://parse.udacity.com/parse/classes/StudentLocation/\(objectID)"
         let url = URL(string: urlString)
@@ -243,7 +243,7 @@ class StudentLocationAPI {
         request.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
         request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = "{\"uniqueKey\": \"\(student.uniqueKey)\", \"firstName\": \"\(student.firstName)\", \"lastName\": \"\(student.lastName)\",\"mapString\": \"\(student.mapString)\", \"mediaURL\": \"\(student.mediaURL)\",\"latitude\": \(student.latitude), \"longitude\": \(student.longitude)}".data(using: .utf8)
+        request.httpBody = "{\"uniqueKey\": \"\(StudentLocationAPI.Constants.studentKey)\", \"firstName\": \"\(StudentLocationAPI.Constants.firstName)\", \"lastName\": \"\(StudentLocationAPI.Constants.lastName)\",\"mapString\": \"\(StudentLocationAPI.Constants.mapString)\", \"mediaURL\": \"\(StudentLocationAPI.Constants.mediaURL)\",\"latitude\": \(StudentLocationAPI.Constants.latitude), \"longitude\": \(StudentLocationAPI.Constants.longitude)}".data(using: .utf8)
         let session = URLSession.shared
         let task = session.dataTask(with: request) { data, response, error in
             if error != nil {

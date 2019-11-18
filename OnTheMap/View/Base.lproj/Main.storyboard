@@ -149,6 +149,63 @@
             </objects>
             <point key="canvasLocation" x="4143" y="135"/>
         </scene>
+        <!--Confirmation View Controller-->
+        <scene sceneID="WWN-ra-PsP">
+            <objects>
+                <viewController storyboardIdentifier="ConfirmationViewController" id="ebC-lW-vkW" customClass="ConfirmationViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z3X-KD-MwN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTJ-rc-H6f">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Os3-bg-vRl">
+                                        <barButtonItem key="leftBarButtonItem" title="Add Location" id="uGv-pk-bMp">
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="ebC-lW-vkW" id="WQ7-AP-QRw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SLE-gL-x3A">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq8-6X-i4X">
+                                <rect key="frame" x="32" y="812" width="350" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishButtonPressed:" destination="ebC-lW-vkW" eventType="touchUpInside" id="mrP-xA-IEP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yq8-6X-i4X" firstAttribute="leading" secondItem="jg0-b5-zy0" secondAttribute="leading" constant="32" id="79M-hz-KLn"/>
+                            <constraint firstItem="jg0-b5-zy0" firstAttribute="trailing" secondItem="yq8-6X-i4X" secondAttribute="trailing" constant="32" id="H1l-W7-NcV"/>
+                            <constraint firstItem="UTJ-rc-H6f" firstAttribute="leading" secondItem="jg0-b5-zy0" secondAttribute="leading" id="cv2-vB-364"/>
+                            <constraint firstItem="jg0-b5-zy0" firstAttribute="bottom" secondItem="SLE-gL-x3A" secondAttribute="bottom" id="doq-Fe-7og"/>
+                            <constraint firstItem="SLE-gL-x3A" firstAttribute="leading" secondItem="jg0-b5-zy0" secondAttribute="leading" id="kbx-Fc-Se3"/>
+                            <constraint firstItem="jg0-b5-zy0" firstAttribute="bottom" secondItem="yq8-6X-i4X" secondAttribute="bottom" constant="20" id="lOe-2m-GId"/>
+                            <constraint firstItem="jg0-b5-zy0" firstAttribute="trailing" secondItem="SLE-gL-x3A" secondAttribute="trailing" id="mgz-p3-rfF"/>
+                            <constraint firstItem="SLE-gL-x3A" firstAttribute="top" secondItem="UTJ-rc-H6f" secondAttribute="bottom" id="o5b-YQ-Q1H"/>
+                            <constraint firstItem="UTJ-rc-H6f" firstAttribute="top" secondItem="jg0-b5-zy0" secondAttribute="top" id="sly-0B-BKn"/>
+                            <constraint firstItem="UTJ-rc-H6f" firstAttribute="trailing" secondItem="jg0-b5-zy0" secondAttribute="trailing" id="zvL-VV-452"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jg0-b5-zy0"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="SLE-gL-x3A" id="izj-N1-hQg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKj-0w-l0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5038" y="137"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="wai-Im-Z9C">
             <objects>
