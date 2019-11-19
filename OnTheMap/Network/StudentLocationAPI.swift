@@ -33,7 +33,7 @@ class StudentLocationAPI {
     
     class func loadUsers(completion: @escaping (RootResult?, Error?)-> Void ){
         
-        let request = URLRequest(url: URL(string: "\(StudentLocationAPI.Constants.urlStudentLocation)?limit=30")!)
+        let request = URLRequest(url: URL(string: "\(StudentLocationAPI.Constants.urlStudentLocation)?order=-updatedAt&limit=200")!)
         let session = URLSession.shared
         let task = session.dataTask(with: request) { data, response, error in
             guard let data = data else {return}
@@ -86,7 +86,7 @@ class StudentLocationAPI {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         // encoding a JSON body from a string, can also use a Codable struct
-        request.httpBody = "{\"udacity\": {\"username\": \"almakrami.mohsen@gmail.com\", \"password\": \"Moh994!sen\"}}".data(using: .utf8)
+        request.httpBody = "{\"udacity\": {\"username\": \"\(email)\", \"password\": \"\(password)\"}}".data(using: .utf8)
         let session = URLSession.shared
         let task = session.dataTask(with: request) { data, response, error in
             guard let data = data?.dropFirst(5) else {return}
@@ -199,6 +199,7 @@ class StudentLocationAPI {
         let task = session.dataTask(with: request) { data, response, error in
             guard (error == nil) else {
                 print("error in your request")
+                completionHandlerfForPostLocation(false,"Error in your request",nil)
                 return
             }
             

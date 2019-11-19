@@ -76,10 +76,12 @@
 		820E00B2236748050041BCE7 /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
+				8239034C238451A8009C56DE /* Network */,
+				8239034B23845128009C56DE /* Extentions */,
 				82CAB8DD2381C86300B0D79C /* Controller */,
 				82BC5BE1236CB1CA00DC075A /* Model */,
 				8289356D2367500A00EED2F1 /* Helpers */,
-				8289356623674E7400EED2F1 /* View */,
+				8289356623674E7400EED2F1 /* storyboard */,
 				820E00B3236748050041BCE7 /* AppDelegate.swift */,
 				821E43AC237F2626008A8259 /* Assets.xcassets */,
 				820E00B5236748050041BCE7 /* SceneDelegate.swift */,
@@ -87,19 +89,35 @@
 			path = OnTheMap;
 			sourceTree = "<group>";
 		};
-		8289356623674E7400EED2F1 /* View */ = {
+		8239034B23845128009C56DE /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				828935702367507C00EED2F1 /* Extensions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		8239034C238451A8009C56DE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				823E4C602380454900E0A835 /* StudentLocationAPI.swift */,
+				822BA126238318000086A34A /* Location.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8289356623674E7400EED2F1 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				820E00B9236748050041BCE7 /* Main.storyboard */,
 			);
-			path = View;
+			path = storyboard;
 			sourceTree = "<group>";
 		};
 		8289356D2367500A00EED2F1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				8289356E2367502100EED2F1 /* AppStoryboard.swift */,
-				828935702367507C00EED2F1 /* Extensions.swift */,
 				823E4C5E2380397200E0A835 /* Helper.swift */,
 			);
 			path = Helpers;
@@ -109,8 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				82BC5BE2236CB25900DC075A /* StudentLocation.swift */,
-				823E4C602380454900E0A835 /* StudentLocationAPI.swift */,
-				822BA126238318000086A34A /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
